@@ -68,7 +68,7 @@ describe('#businessNameController', () => {
     test('Should redirect to business address when selling alongside other activities', async () => {
       const cookie = await answerStep(server, {
         url: '/business-activities',
-        payload: { businessActivities: ['selling', 'distributing'] }
+        payload: { businessActivities: ['selling', 'manufacturing'] }
       })
 
       const { statusCode, headers } = await server.inject({

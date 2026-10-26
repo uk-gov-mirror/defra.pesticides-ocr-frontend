@@ -90,7 +90,7 @@ describe('#businessContactController', () => {
     test('Should redirect to address activity page when the business does not use PPPs', async () => {
       const cookie = await answerStep(server, {
         url: '/business-activities',
-        payload: { businessActivities: ['selling', 'distributing'] }
+        payload: { businessActivities: ['selling', 'manufacturing'] }
       })
 
       const { statusCode, headers } = await server.inject({
